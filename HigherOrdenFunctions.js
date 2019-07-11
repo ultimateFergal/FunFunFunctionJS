@@ -1,3 +1,5 @@
+// Higher orders fucntions are functions that take other functions as arguments
+
 // in functional programming languages, functions are values
 var triple = function (x) {
     return x * 3;
@@ -43,4 +45,22 @@ for ( var i = 0; i < animals.length; i++) {
         dogs3.push(animals[i]);
     }
 }
+
+// Map function(transforms every element)
+
+var names = [];
+var names1 = [];
+
+for (var i = 0; i < animals.length; i++) {
+    names.push(animals[i].name);
+}
+
+// Map function with callback function
+names1 = animals.map(function(animal) {
+    return animal.name;
+});
+
+// Just map funciton in ES6
+names2 = animals.map((animal) => animal.name);
+
 
